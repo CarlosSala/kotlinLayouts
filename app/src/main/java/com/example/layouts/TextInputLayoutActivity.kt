@@ -20,8 +20,10 @@ class TextInputLayoutActivity : AppCompatActivity() {
         binding = ActivityTextInputLayoutBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        /*  Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);*/
+        initListeners()
+    }
+
+    private fun initListeners() {
 
         binding.etNameField.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {}
@@ -31,6 +33,7 @@ class TextInputLayoutActivity : AppCompatActivity() {
 
             override fun afterTextChanged(s: Editable) {}
         })
+
         binding.etCellphoneField.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
@@ -39,6 +42,7 @@ class TextInputLayoutActivity : AppCompatActivity() {
 
             override fun afterTextChanged(s: Editable) {}
         })
+
         binding.etEmailField.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
@@ -47,11 +51,6 @@ class TextInputLayoutActivity : AppCompatActivity() {
 
             override fun afterTextChanged(s: Editable) {}
         })
-
-        initListeners()
-    }
-
-    private fun initListeners() {
 
         binding.btnBack.setOnClickListener {
 
@@ -120,6 +119,8 @@ class TextInputLayoutActivity : AppCompatActivity() {
         if (a && b && c) {
 
             Toast.makeText(this, "Register successful", Toast.LENGTH_LONG).show()
+        } else {
+            Toast.makeText(this, "Register failed", Toast.LENGTH_LONG).show()
         }
     }
 }

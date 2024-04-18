@@ -48,7 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
-            android:background="@drawable/strawberries"
+            android:background="@drawable/strawberry"
             android:text="@string/back" />
 
         <Button

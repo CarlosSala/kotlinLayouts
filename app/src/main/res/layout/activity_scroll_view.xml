@@ -2,15 +2,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
-
-    tools:context=".ScrollViewActivity">
+    app:layout_constraintBottom_toBottomOf="parent"
+    tools:context=".ScrollViewActivity"
+    android:id="@+id/scroll_view">
 
     <LinearLayout
+        android:id="@+id/linear_layout_sv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -21,8 +22,7 @@
             android:layout_height="wrap_content"
             android:background="@android:color/holo_orange_dark"
             android:contentDescription="@string/description"
-            android:onClick="Selection"
-            app:srcCompat="@drawable/bananas" />
+            app:srcCompat="@drawable/banana" />
 
         <ImageButton
             android:id="@+id/cherry"
@@ -30,8 +30,7 @@
             android:layout_height="wrap_content"
             android:background="@android:color/holo_green_light"
             android:contentDescription="@string/description"
-            android:onClick="Selection"
-            app:srcCompat="@drawable/cerezas" />
+            app:srcCompat="@drawable/cherry" />
 
         <ImageButton
             android:id="@+id/strawberry"
@@ -39,8 +38,7 @@
             android:layout_height="wrap_content"
             android:background="@android:color/holo_orange_dark"
             android:contentDescription="@string/description"
-            android:onClick="Selection"
-            app:srcCompat="@drawable/fresas" />
+            app:srcCompat="@drawable/strawberry" />
 
         <ImageButton
             android:id="@+id/kiwi"
@@ -48,8 +46,7 @@
             android:layout_height="wrap_content"
             android:background="@android:color/holo_green_light"
             android:contentDescription="@string/description"
-            android:onClick="Selection"
-            app:srcCompat="@drawable/kiwis" />
+            app:srcCompat="@drawable/kiwi" />
 
         <ImageButton
             android:id="@+id/apples"
@@ -57,8 +54,7 @@
             android:layout_height="wrap_content"
             android:background="@android:color/holo_orange_dark"
             android:contentDescription="@string/description"
-            android:onClick="Selection"
-            app:srcCompat="@drawable/manzanas" />
+            app:srcCompat="@drawable/apples" />
 
         <ImageButton
             android:id="@+id/oranges"
@@ -66,16 +62,14 @@
             android:layout_height="wrap_content"
             android:background="@android:color/holo_green_light"
             android:contentDescription="@string/description"
-            android:onClick="Selection"
-            app:srcCompat="@drawable/naranjas" />
+            app:srcCompat="@drawable/oranges" />
 
         <ImageButton
-            android:id="@+id/melons"
+            android:id="@+id/melon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/holo_orange_dark"
             android:contentDescription="@string/description"
-            android:onClick="Selection"
             app:srcCompat="@drawable/melon" />
 
         <ImageButton
@@ -84,8 +78,7 @@
             android:layout_height="wrap_content"
             android:background="@android:color/holo_green_light"
             android:contentDescription="@string/description"
-            android:onClick="Selection"
-            app:srcCompat="@drawable/pina" />
+            app:srcCompat="@drawable/pineapple" />
 
         <ImageButton
             android:id="@+id/pear"
@@ -93,8 +86,7 @@
             android:layout_height="wrap_content"
             android:background="@android:color/holo_orange_dark"
             android:contentDescription="@string/description"
-            android:onClick="Selection"
-            app:srcCompat="@drawable/pera" />
+            app:srcCompat="@drawable/pear" />
 
         <ImageButton
             android:id="@+id/blackberry"
@@ -102,8 +94,7 @@
             android:layout_height="wrap_content"
             android:background="@android:color/holo_green_light"
             android:contentDescription="@string/description"
-            android:onClick="Selection"
-            app:srcCompat="@drawable/zarzamora" />
+            app:srcCompat="@drawable/blackberry" />
 
         <ImageButton
             android:id="@+id/watermelon"
@@ -111,8 +102,7 @@
             android:layout_height="wrap_content"
             android:background="@android:color/holo_orange_dark"
             android:contentDescription="@string/description"
-            android:onClick="Selection"
-            app:srcCompat="@drawable/sandia" />
+            app:srcCompat="@drawable/watermelon" />
 
         <ImageButton
             android:id="@+id/grapes"
@@ -120,8 +110,7 @@
             android:layout_height="wrap_content"
             android:background="@android:color/holo_green_light"
             android:contentDescription="@string/description"
-            android:onClick="Selection"
-            app:srcCompat="@drawable/uvas" />
+            app:srcCompat="@drawable/grapes" />
 
         <Button
             android:id="@+id/btn_next"
@@ -130,6 +119,7 @@
             android:text="@string/next">
 
         </Button>
+
         <Button
             android:id="@+id/btn_back"
             android:layout_width="match_parent"
