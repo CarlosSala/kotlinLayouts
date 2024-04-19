@@ -9,19 +9,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".DynamicFragmentActivity" />
-        <activity android:name=".StaticsFragmentsActivity"
+        <activity android:name=".StaticsFragmentsActivity" />
+        <activity android:name=".DesignAdaptable2Activity" />
+        <activity android:name=".TextInputLayoutActivity" />
+        <activity android:name=".ScrollViewActivity" />
+        <activity android:name=".TableLayoutActivity" />
+        <activity android:name=".DesignAdaptableActivity" />
+        <activity android:name=".FrameLayoutActivity"
             android:exported="true">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".DesignAdaptable2Activity" />
-        <activity android:name=".TextInputLayoutActivity" />
-        <activity android:name=".ScrollViewActivity"/>
-        <activity android:name=".TableLayoutActivity" />
-        <activity android:name=".DesignAdaptableActivity" />
-        <activity android:name=".FrameLayoutActivity"/>
     </application>
 
 </manifest>

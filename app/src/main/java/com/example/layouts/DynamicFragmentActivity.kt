@@ -4,42 +4,40 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentTransaction
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
+import com.example.layouts.databinding.ActivityDynamicFragmentBinding
 import com.example.layouts.fragments.FragmentBlue
 import com.example.layouts.fragments.FragmentGreen
 import com.example.layouts.fragments.FragmentRed
 
 class DynamicFragmentActivity : AppCompatActivity() {
-    var fragmentRed: FragmentRed? = null
-    var fragmentBlue: FragmentBlue? = null
-    var fragmentGreen: FragmentGreen? = null
-    var transaction: FragmentTransaction? = null
+
+    private lateinit var binding: ActivityDynamicFragmentBinding
+    private lateinit var navController: NavController
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_dynamic_fragment)
-        fragmentRed = FragmentRed()
-        fragmentBlue = FragmentBlue()
-        fragmentGreen = FragmentGreen()
-        supportFragmentManager.beginTransaction().add(R.id.containerFragments, fragmentRed!!).commit()
+
+        binding = ActivityDynamicFragmentBinding.inflate(layoutInflater)
+
+        setContentView(binding.root)
+
+        initUI()
     }
 
-    fun onClick(view: View) {
-        transaction = supportFragmentManager.beginTransaction()
-        when (view.id) {
-            R.id.btn_red -> {
-                transaction!!.replace(R.id.containerFragments, fragmentRed!!)
-                transaction!!.addToBackStack(null)
-            }
+    private fun initUI() {
 
-            R.id.btn_blue -> {
-                transaction!!.replace(R.id.containerFragments, fragmentBlue!!)
-                transaction!!.addToBackStack(null)
-            }
+        initNavigate()
+    }
 
-            R.id.btn_green -> {
-                transaction!!.replace(R.id.containerFragments, fragmentGreen!!)
-                transaction!!.addToBackStack(null)
-            }
-        }
-        transaction!!.commit()
+    private fun initNavigate() {
+
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.containerFragments) as NavHostFragment
+
+        navController = navHostFragment.navController
+        binding.bottomNav.setupWithNavController(navController)
     }
 }

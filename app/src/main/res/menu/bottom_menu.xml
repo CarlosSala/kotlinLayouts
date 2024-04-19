@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/fragmentBlue"
+        android:title="@string/blue"
+        android:icon="@drawable/blackberry" />
+    <item
+        android:id="@+id/fragmentRed"
+        android:title="@string/red"
+        android:icon="@drawable/strawberry"/>
+    <item
+        android:id="@+id/fragmentGreen"
+        android:title="@string/green"
+        android:icon="@drawable/pear"/>
+
+
+</menu>

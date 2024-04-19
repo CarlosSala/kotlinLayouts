@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/fragmentRed">
+
+    <fragment
+        android:id="@+id/fragmentRed"
+        android:name="com.example.layouts.fragments.FragmentRed"
+        android:label="FragmentRed"
+        tools:layout="@layout/fragment_red" />
+
+    <fragment
+        android:id="@+id/fragmentGreen"
+        android:name="com.example.layouts.fragments.FragmentGreen"
+        android:label="FragmentGreen"
+        tools:layout="@layout/fragment_green" />
+
+    <fragment
+        android:id="@+id/fragmentBlue"
+        android:name="com.example.layouts.fragments.FragmentBlue"
+        android:label="fragment_blue"
+        tools:layout="@layout/fragment_blue" />
+</navigation>

@@ -5,31 +5,49 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import androidx.fragment.app.Fragment
 import com.example.layouts.DynamicFragmentActivity
-import com.example.layouts.R
+import com.example.layouts.databinding.FragmentBlueBinding
 
 class FragmentBlue : Fragment() {
-    var btn_next: Button? = null
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
-        val vista = inflater.inflate(R.layout.fragment_blue, container, false)
-        btn_next = vista.findViewById(R.id.btn_next)
 
-        // String activityActual = requireActivity().toString();
-        val current_activity = requireActivity().toString().substring(0, 43)
-        if (current_activity == "com.example.layouts.DynamicFragmentActivity") {
-            hidde_btn_next(view)
-        }
-        btn_next?.setOnClickListener(View.OnClickListener {
-            val intent = Intent(context, DynamicFragmentActivity::class.java)
-            startActivity(intent)
-        })
-        return vista
+    private var binding: FragmentBlueBinding? = null
+
+    companion object {
+        private const val CURRENT_ACTIVITY = "com.example.layouts.DynamicFragmentActivity"
     }
 
-    fun hidde_btn_next(view: View?) {
-        btn_next!!.visibility = View.INVISIBLE
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
+    ): View {
+
+        // Inflate the layout for this fragment
+        binding = FragmentBlueBinding.inflate(layoutInflater, container, false)
+
+        initListeners()
+
+        // if this fragment is shown in the DynamicFragmentActivity, hide the button
+        hiddeBtnNext()
+
+        return binding!!.root
+    }
+
+    private fun initListeners() {
+
+        binding!!.btnNext.setOnClickListener {
+
+            val intent = Intent(context, DynamicFragmentActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
+    private fun hiddeBtnNext() {
+
+        val currentActivity = requireActivity().toString().substring(0, 43)
+
+        if (currentActivity == CURRENT_ACTIVITY ) {
+
+            binding!!.btnNext.visibility = View.INVISIBLE
+        }
     }
 }
