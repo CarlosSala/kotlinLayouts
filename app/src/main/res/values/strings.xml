@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">LayoutsJava</string>
+    <string name="app_name">KotlinLayout</string>
     <string name="hidden">Hidden</string>
     <string name="button">Button</string>
     <string name="text">¡Hi I am Luis!.</string>
