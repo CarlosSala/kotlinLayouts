@@ -54,4 +54,12 @@
     <string name="blue">Blue</string>
     <string name="green">Green</string>
     <string name="hint_password">Password</string>
+    <string name="frame_layout">Frame Layout</string>
+    <string name="design_adaptable">Design Adaptable</string>
+    <string name="design_adaptable2">Design Adaptable 2</string>
+    <string name="table_layout">Table Layout</string>
+    <string name="text_input_layout">TextInput Layout</string>
+    <string name="scroll_view">ScrollView</string>
+    <string name="static_fragment">Static Fragment</string>
+    <string name="dynamic_fragment">Dynamic Fragment</string>
 </resources>

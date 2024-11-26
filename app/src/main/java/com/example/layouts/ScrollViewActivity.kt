@@ -23,7 +23,7 @@ class ScrollViewActivity : AppCompatActivity() {
         // getSupportActionBar().setDisplayShowHomeEnabled(true);
         // getSupportActionBar().setIcon(R.mipmap.ic_launcher);
 
-        initListeners()
+       // initListeners()
     }
 
     private fun initListeners() {

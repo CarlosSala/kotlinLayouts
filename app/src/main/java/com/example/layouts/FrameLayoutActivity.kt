@@ -1,6 +1,5 @@
 package com.example.layouts
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
@@ -24,10 +23,10 @@ class FrameLayoutActivity : AppCompatActivity() {
         binding.ivFrameLayout.setOnClickListener { hideImage() }
         binding.btnFrameLayout.setOnClickListener { hideBtn() }
 
-        binding.btnFrameLayoutNext.setOnClickListener {
+   /*     binding.btnFrameLayoutNext.setOnClickListener {
             val intent = Intent(this, DesignAdaptableActivity::class.java)
             startActivity(intent)
-        }
+        }*/
     }
 
     private fun hideBtn() {

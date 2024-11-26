@@ -24,7 +24,7 @@ class FragmentBlue : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentBlueBinding.inflate(layoutInflater, container, false)
 
-        initListeners()
+       // initListeners()
 
         // if this fragment is shown in the DynamicFragmentActivity, hide the button
         hiddeBtnNext()

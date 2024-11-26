@@ -52,7 +52,7 @@ class TextInputLayoutActivity : AppCompatActivity() {
             override fun afterTextChanged(s: Editable) {}
         })
 
-        binding.btnBack.setOnClickListener {
+    /*    binding.btnBack.setOnClickListener {
 
             val intent = Intent(this, TableLayoutActivity::class.java)
             startActivity(intent)
@@ -61,7 +61,7 @@ class TextInputLayoutActivity : AppCompatActivity() {
 
             val intent = Intent(this, ScrollViewActivity::class.java)
             startActivity(intent)
-        }
+        }*/
         binding.btnAccept.setOnClickListener { validateData() }
     }
 

@@ -14,7 +14,7 @@ class DesignAdaptable2Activity : AppCompatActivity() {
         binding = ActivityDesignAdaptable2Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        initListeners()
+       // initListeners()
     }
 
     private fun initListeners() {

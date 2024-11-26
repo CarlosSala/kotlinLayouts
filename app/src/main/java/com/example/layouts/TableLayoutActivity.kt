@@ -15,7 +15,7 @@ class TableLayoutActivity : AppCompatActivity() {
         binding = ActivityTableLayoutBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        initListeners()
+       // initListeners()
     }
 
     private fun initListeners() {
