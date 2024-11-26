@@ -16,6 +16,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity android:name=".DynamicFragmentActivity" />
         <activity android:name=".StaticsFragmentsActivity" />
@@ -24,15 +25,8 @@
         <activity android:name=".ScrollViewActivity" />
         <activity android:name=".TableLayoutActivity" />
         <activity android:name=".DesignAdaptableActivity" />
-        <activity
-            android:name=".FrameLayoutActivity"
-            android:exported="true">
-            <intent-filter>
-                <category android:name="android.intent.category.LAUNCHER" />
-
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".FrameLayoutActivity" />
+        <activity android:name=".InteroperabilityActivity" />
     </application>
 
 </manifest>

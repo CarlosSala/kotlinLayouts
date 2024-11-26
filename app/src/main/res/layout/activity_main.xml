@@ -79,4 +79,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_static_fragment" />
 
+    <Button
+        android:id="@+id/btn_interoperability"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/interoperability"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_dynamic_fragment" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

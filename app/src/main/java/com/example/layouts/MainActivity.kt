@@ -57,6 +57,9 @@ class MainActivity : AppCompatActivity() {
             btnDynamicFragment.setOnClickListener {
                 startNewActivity(DynamicFragmentActivity::class.java)
             }
+            btnInteroperability.setOnClickListener {
+                startNewActivity(InteroperabilityActivity::class.java)
+            }
         }
     }
 
