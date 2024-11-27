@@ -7,11 +7,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.wrapContentWidth
-import androidx.compose.material3.FabPosition.Companion.Center
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.text.style.TextAlign
@@ -51,16 +49,19 @@ class InteroperabilityActivity : AppCompatActivity() {
 fun HelloCompose(modifier: Modifier = Modifier) {
     Column(Modifier.fillMaxSize()) {
         Text(
-            text = "hello sin jetpack compose",
+            text = "hello since jetpack compose",
             textAlign = TextAlign.Center,
-           // modifier = Modifier.wrapContentWidth(Alignment.CenterHorizontally)
+            // modifier = Modifier.wrapContentWidth(Alignment.CenterHorizontally)
         )
         // Android View (xml) since Jetpack Compose)
-        AndroidView(factory = {
-            TextView(it).apply {
-                text = "hello xml since jetpack compose"
-                gravity = Gravity.CENTER_HORIZONTAL
-            }
-        })
+        AndroidView(
+            modifier = Modifier.fillMaxWidth(),
+            factory = { context ->
+                TextView(context).apply {
+                    text = "hello xml since jetpack compose"
+                    textSize = 19f
+                    gravity = Gravity.CENTER_HORIZONTAL
+                }
+            })
     }
 }
